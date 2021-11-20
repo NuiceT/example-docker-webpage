@@ -12,12 +12,12 @@
     <div>
         <h1>Holy shit! This is running!</h1>
         <p>Look at this! This webpage is actually running. For testing purposes, a real time clock made with PHP (UTC):
-        <?php
-        date_default_timezone_set('UTC');
-        echo $timestamp = date('H:i:s');
-
-        header("refresh: 3");
-        ?>
+            <?php
+            header("refresh: 3");
+            
+            date_default_timezone_set('UTC');
+            echo date('H:i:s');
+            ?>
         </p>
     </div>
 </body>
