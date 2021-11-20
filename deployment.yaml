@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: exampledockerwebpage-deployment
+  labels:
+    app: example-docker-webpage
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: example-docker-webpage
+  template:
+    metadata:
+      labels:
+        app: example-docker-webpage
+    spec:
+      containers:
+      - name: example-docker-webpage
+        image: ghcr.io/nuicet/example-docker-webpage:master
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
