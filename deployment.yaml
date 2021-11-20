@@ -5,7 +5,7 @@ metadata:
   labels:
     app: example-docker-webpage
 spec:
-  replicas: 10
+  replicas: 1
   selector:
     matchLabels:
       app: example-docker-webpage
